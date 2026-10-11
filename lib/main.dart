@@ -12,7 +12,7 @@ class PuzzleGameApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Puzzle Game\n Developed by Tatayya Naidu Chavatapalli',
+      title: '8 Puzzle Game',
       theme: ThemeData(useMaterial3: true, fontFamily: 'Arial'),
       home: const PuzzleGame(),
     );
@@ -200,9 +200,19 @@ class _PuzzleGameState extends State<PuzzleGame> {
     return Scaffold(
       backgroundColor: const Color(0xFFF3F1FF),
       appBar: AppBar(
-        title: const Text(
-          '🧩 8 Puzzle Game',
-          style: TextStyle(fontWeight: FontWeight.bold),
+        toolbarHeight: 76,
+        title: const Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(
+              '🧩 8 Puzzle Game',
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
+            Text(
+              'Developed by Tatayya Naidu Chavatapalli',
+              style: TextStyle(fontSize: 11, color: Colors.white70),
+            ),
+          ],
         ),
         centerTitle: true,
         backgroundColor: const Color(0xFF6A5AE0),
